@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+```
+bundle install
+rails db:setup
+rails server
+```
 
-* Ruby version
+## Usage
 
-* System dependencies
+* You can create an user on `/users/sign_up`
+* Then you can login on `/users/sign_in`
+* Under `spec/fixtures/files/contacts.csv` there are some example files to upload.
 
-* Configuration
+## Pending features
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Parsing Credit cards
+* Display an error log for invalid contacts
