@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :rememberable
 
   has_many :uploads
+  has_many :contacts
 
   validates_confirmation_of :password, only: :create
 end
