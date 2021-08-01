@@ -24,7 +24,11 @@ class Upload < ApplicationRecord
         email: row[self.email_column]
       }
       contact = user.contacts.create(data)
-      total += 1 if contact.persisted?
+      if contact.persisted?
+        total += 1
+      else
+        Rails.logger.info contact.errors.full_messages
+      end
     end
 
     if total > 0
