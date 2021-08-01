@@ -5,14 +5,24 @@
 <table>
   <thead>
     <tr>
+      <th>File</th>
       <th>Status</th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @uploads.each do |upload| %>
       <tr>
+        <td><%= upload.file.filename %></td>
         <td><%= upload.status %></td>
+        <td>
+          <% if upload.on_hold? %>
+            <%= button_to 'Import', import_upload_path(upload), method: :post %>
+          <% end %>
+        </td>
+        <td><%= link_to 'Delete', upload_path(upload), method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
