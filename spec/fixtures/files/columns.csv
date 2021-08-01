@@ -1,0 +1,7 @@
+name,date_of_birth,phone,address,credit_card,email
+Valid Contact A,1980-01-01,(+57) 320 432 05 09,1st Avenue 123,371449635398431,john@example.com
+Valid Contact B,1980-01-01,(+57) 320 432 05 09,1st Avenue 123,371449635398431,jane@example.com
+Invalid email A,1980-01-01,(+57) 320 432 05 09,1st Avenue 123,371449635398431,invalid email
+Invalid email B,1980-01-01,(+57) 320 432 05 09,1st Avenue 123,371449635398431,invalid!!@example.com
+Invalid Phone A,1980-01-01,(57) 320 432 05 09,1st Avenue 123,371449635398431,invalid3@example.com
+Invalid Phone B,1980-01-01,(+57) 3204320509,1st Avenue 123,371449635398431,invalid42@example.com

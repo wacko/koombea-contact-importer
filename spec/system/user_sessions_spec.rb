@@ -12,7 +12,7 @@ RSpec.describe 'User sessions', type: :system do
     click_button 'Sign up'
 
     expect(User.count).to eq(existing_users + 1)
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(user_root_path)
     expect(page).to have_text('Sign out')
   end
 
@@ -25,7 +25,7 @@ RSpec.describe 'User sessions', type: :system do
     fill_in 'Password', with: 'password'
     click_button 'Log in'
 
-    expect(current_path).to eq(root_path)
+    expect(current_path).to eq(user_root_path)
     expect(page).to have_text('Sign out')
   end
 
