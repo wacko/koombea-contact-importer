@@ -1,0 +1,7 @@
+date_of_birth,full_name,phone,address,credit_card,email,dummy
+1980-01-01,Valid Contact A OK,(+57) 320 432 05 09,1st Avenue 123,371449635398431,john@example.com,Additional data
+1980-01-01,Valid Contact B OK,(+57) 320 432 05 09,1st Avenue 123,371449635398431,jane@example.com,Additional data
+1980-01-01,Invalid email A,(+57) 320 432 05 09,1st Avenue 123,371449635398431,invalid email,Additional data
+1980-01-01,Invalid email B,(+57) 320 432 05 09,1st Avenue 123,371449635398431,invalid!!@example.com,Additional data
+1980-01-01,Invalid Phone A,(57) 320 432 05 09,1st Avenue 123,371449635398431,invalid3@example.com,Additional data
+1980-01-01,Invalid Phone B,(+57) 3204320509,1st Avenue 123,371449635398431,invalid42@example.com,Additional data
