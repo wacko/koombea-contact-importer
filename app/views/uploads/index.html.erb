@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Uploads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @uploads.each do |upload| %>
+      <tr>
+        <td><%= upload.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Upload', new_upload_path %>

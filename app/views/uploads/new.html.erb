@@ -1,0 +1,58 @@
+<h1>Upload new contacts</h1>
+
+<%= form_with(model: @upload) do |form| %>
+  <% if @upload.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@upload.errors.count, "error") %> prohibited this upload from being saved:</h2>
+
+      <ul>
+        <% @upload.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :file %>
+    <%= form.file_field :file %>
+  </div>
+
+  <h2>Column names:</h2>
+
+  <div class="field">
+    <%= form.label :name_column, 'Name' %>
+    <%= form.text_field :name_column, value: 'name' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_birth_column, 'Date of birth' %>
+    <%= form.text_field :date_of_birth_column, value: 'date_of_birth' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_column, 'Phone' %>
+    <%= form.text_field :phone_column, value: 'phone' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address_column, 'Address' %>
+    <%= form.text_field :address_column, value: 'address' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :credit_card_column, 'Credit card' %>
+    <%= form.text_field :credit_card_column, value: 'credit_card' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email_column, 'Email' %>
+    <%= form.text_field :email_column, value: 'email' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Upload' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', uploads_path %>
