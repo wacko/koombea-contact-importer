@@ -1,0 +1,9 @@
+one_contact:
+  user: user
+  status: on_hold
+  name_column: name
+  date_of_birth_column: date_of_birth
+  phone_column: phone
+  address_column: address
+  credit_card_column: credit_card
+  email_column: email

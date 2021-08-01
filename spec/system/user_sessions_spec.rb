@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'User sessions', type: :system do
   it 'sucessful sign up' do
+    existing_users = User.count
+
     visit new_user_registration_url
 
     fill_in 'Email', with: 'new_user@example.com'
@@ -9,7 +11,7 @@ RSpec.describe 'User sessions', type: :system do
     fill_in 'Password confirmation', with: 'password'
     click_button 'Sign up'
 
-    expect(User.count).to eq(1)
+    expect(User.count).to eq(existing_users + 1)
     expect(current_path).to eq(root_path)
     expect(page).to have_text('Sign out')
   end
