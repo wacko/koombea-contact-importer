@@ -22,6 +22,8 @@ gem 'jbuilder', '~> 2.7'
 
 # Authentication
 gem 'devise', '~> 4.8'
+# Pagination
+gem 'pagy', '~> 4.10', '>= 4.10.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
