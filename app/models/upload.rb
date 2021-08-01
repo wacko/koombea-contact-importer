@@ -13,6 +13,7 @@ class Upload < ApplicationRecord
 
   def import_contacts
     processing!
+    total = 0
     CSV.parse(file.download, headers: true) do |row|
       data = {
         name: row[self.name_column],
@@ -22,9 +23,14 @@ class Upload < ApplicationRecord
         credit_card: row[self.credit_card_column],
         email: row[self.email_column]
       }
-      user.contacts.create(data)
+      contact = user.contacts.create(data)
+      total += 1 if contact.persisted?
     end
 
-    finished!
+    if total > 0
+      finished!
+    else
+      failed!
+    end
   end
 end
